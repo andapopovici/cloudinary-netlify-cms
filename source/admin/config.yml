@@ -1,8 +1,14 @@
 backend:
   name: git-gateway
 
-media_folder: source/images/uploads
+#media_folder: source/images/uploads
 public_folder: /images/uploads
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: drzfqrj57
+    api_key: 898113495945594
 
 #publish_mode: editorial_workflow #optional, enables publishing workflow
 
