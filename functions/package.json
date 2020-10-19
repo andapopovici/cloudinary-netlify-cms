@@ -1,0 +1,15 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello.js",
+  "scripts": {
+    "build": "npm i"
+  },
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
