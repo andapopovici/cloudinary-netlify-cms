@@ -13,23 +13,33 @@
     <script src="https://unpkg.com/dayjs@^1.7.5/dayjs.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="previews.js" type="text/babel"></script>
+    <script src="https://media-library.cloudinary.com/global/all.js"></script> 
     <script>
       CMS.registerPreviewStyle('/stylesheets/all.css');
     </script>
-    <button id="media-library-btn" class="cloudinary-button">Open library</button>
 
-    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
-    
-    <script type="text/javascript">  
+
+  <script type="text/javascript">  
       CMS.registerMediaLibrary(cloudinary);
 
-      window.ml = cloudinary.createMediaLibrary({
+       window.ml = cloudinary.createMediaLibrary({
         cloud_name: 'drzfqrj57',
         api_key: '898113495945594',
-        username: 'website@freeagent.com'}, null, "#media-library-btn");
-
+        username: 'website@freeagent.com',
+        timestamp: '1603115266',
+        signature: '88f130672a76b969860078016d75cbb3bacc53e25bc075457c10bd6206e95b95',
+        button_class: 'cloudinary-button',
+        button_caption: 'Select Image or Video',
+        }, {
+            insertHandler: function (data) {
+              data.assets.forEach(asset => { console.log("Inserted asset:",
+              JSON.stringify(asset, null, 2)) })
+              }
+            },
+            document.getElementById("open-btn")
+        )
       //window.ml = cloudinary.createMediaLibrary(config, {insertHandler: insertHandler}, "#my_btn")
     
-    </script>
+  </script>
   </body>
 </html>
