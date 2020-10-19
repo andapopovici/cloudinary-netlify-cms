@@ -16,21 +16,19 @@
     <script>
       CMS.registerPreviewStyle('/stylesheets/all.css');
     </script>
-    <button id="upload_widget" class="cloudinary-button">Open library</button>
+    <button id="media-library-btn" class="cloudinary-button">Open library</button>
 
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
     
     <script type="text/javascript">  
       CMS.registerMediaLibrary(cloudinary);
 
-      var ml = cloudinary.openMediaLibrary({
+      window.ml = cloudinary.createMediaLibrary({
         cloud_name: 'drzfqrj57',
         api_key: '898113495945594',
-        username: 'website@freeagent.com'});
+        username: 'website@freeagent.com'}, null, "#media-library-btn");
 
-        document.getElementById("upload_widget").addEventListener("click", function(){
-          ml.open();
-      }, false);
+      //window.ml = cloudinary.createMediaLibrary(config, {insertHandler: insertHandler}, "#my_btn")
     
     </script>
   </body>
