@@ -18,6 +18,15 @@
       CMS.registerPreviewStyle('/stylesheets/all.css');
       CMS.registerMediaLibrary(cloudinary);
 
+      fetch("https://cms-cloudinary-demo.netlify.app/.netlify/functions/hello")
+      .then(function(response) {
+        console.log(response)
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.blob();
+      });
+      
       window.ml = cloudinary.createMediaLibrary({
         cloud_name: 'drzfqrj57',
         api_key: '898113495945594',
