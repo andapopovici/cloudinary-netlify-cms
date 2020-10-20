@@ -19,16 +19,17 @@
       CMS.registerMediaLibrary(cloudinary);
 
       fetch("/.netlify/functions/hello")
+      .then(res => res.json())
       .then(function(response) {
-        console.log("RESPONSE BODY")
-        console.log(response.json())
+        console.log("RESPONSE")
+        console.log(response)
 
         window.ml = cloudinary.createMediaLibrary({
         cloud_name: 'drzfqrj57',
         api_key: '898113495945594',
         username: 'website@freeagent.com',
-        timestamp: response.json().timestamp,
-        signature: response.json().signature,
+        timestamp: response.timestamp,
+        signature: response.signature,
         button_class: 'cloudinary-button',
         button_caption: 'Select Image or Video',
       }, {
