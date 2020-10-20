@@ -20,7 +20,11 @@
 
       fetch("/.netlify/functions/hello")
       .then(function(response) {
-        console.log(response)
+        console.log("RESPONSE BODY")
+        console.log(response.body)
+        console.log("RESPONSE timestamp etc")
+        console.log(response.timestamp)
+        console.log(response.signature)
 
         window.ml = cloudinary.createMediaLibrary({
         cloud_name: 'drzfqrj57',
