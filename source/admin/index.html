@@ -9,12 +9,30 @@
   </head>
   <body>
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js" type="text/javascript"></script>
+    <script src="https://media-library.cloudinary.com/global/all.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/dayjs@^1.7.5/dayjs.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="previews.js" type="text/babel"></script>
-    <script>
+    <script type="text/javascript">
       CMS.registerPreviewStyle('/stylesheets/all.css');
+
+      fetch("/.netlify/functions/hello")
+      .then(res => res.json())
+      .then(function(response) {
+        window.ml = cloudinary.createMediaLibrary({
+          cloud_name: 'drzfqrj57',
+          api_key: '898113495945594',
+          username: 'website@freeagent.com',
+          timestamp: response.timestamp,
+          signature: response.signature
+        }, {
+          insertHandler: function (data) {
+            data.assets.forEach(asset => { console.log("Inserted asset:",
+              JSON.stringify(asset, null, 2)) })
+            }
+          }
+      )});
     </script>
   </body>
 </html>
