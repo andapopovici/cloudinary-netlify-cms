@@ -13,6 +13,8 @@ exports.handler = function(event, context, callback) {
       "Access-Control-Allow-Methods":"GET"
     },
     statusCode: 200,
-    body: JSON.stringify({sha256(signature)})
+    body: JSON.stringify({
+      result: sha256(signature)
+    })
   });
-  };
+};
