@@ -13,31 +13,30 @@
     <script src="https://unpkg.com/dayjs@^1.7.5/dayjs.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="previews.js" type="text/babel"></script>
-    <script src="https://media-library.cloudinary.com/global/all.js"></script> 
     <script type="text/javascript">
       CMS.registerPreviewStyle('/stylesheets/all.css');
       //CMS.registerMediaLibrary(cloudinary);
 
-      fetch("/.netlify/functions/hello")
-      .then(res => res.json())
-      .then(function(response) {
-        console.log("RESPONSE")
-        console.log(response)
+      // fetch("/.netlify/functions/hello")
+      // .then(res => res.json())
+      // .then(function(response) {
+      //   console.log("RESPONSE")
+      //   console.log(response)
 
-        window.ml = cloudinary.createMediaLibrary({
-          cloud_name: 'drzfqrj57',
-          api_key: '898113495945594',
-          username: 'website@freeagent.com',
-          timestamp: response.timestamp,
-          signature: response.signature
-        }, {
-          insertHandler: function (data) {
-            data.assets.forEach(asset => { console.log("Inserted asset:",
-              JSON.stringify(asset, null, 2)) })
-            }
-          },
-          document.getElementsByClassName("css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton e16dayda1")[0]
-      )});
+      //   window.ml = cloudinary.createMediaLibrary({
+      //     cloud_name: 'drzfqrj57',
+      //     api_key: '898113495945594',
+      //     username: 'website@freeagent.com',
+      //     timestamp: response.timestamp,
+      //     signature: response.signature
+      //   }, {
+      //     insertHandler: function (data) {
+      //       data.assets.forEach(asset => { console.log("Inserted asset:",
+      //         JSON.stringify(asset, null, 2)) })
+      //       }
+      //     },
+      //     document.getElementsByClassName("css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton e16dayda1")[0]
+      // )});
 
       
     </script>
