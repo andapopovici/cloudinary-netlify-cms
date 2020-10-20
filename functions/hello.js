@@ -5,16 +5,12 @@ exports.handler = function(event, context, callback) {
   const timestamp = Date.now();
   const signature = `cloud_name=drzfqrj57&timestamp=${timestamp}&username=website@freeagent.com${CLOUDINARY_API_SECRET}`
 
-  console.log(sha256(signature))
-
   callback(null, {
     headers: {
       "Access-Control-Allow-Origin" :"open-media-library-manually--cms-cloudinary-demo.netlify.app",
       "Access-Control-Allow-Methods":"GET"
     },
     statusCode: 200,
-    body: JSON.stringify({
-      result: sha256(signature)
-    })
+    body: sha256(signature).toString()
   });
 };
