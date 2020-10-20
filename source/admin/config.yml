@@ -6,8 +6,8 @@ backend:
 media_folder: source/images/uploads
 public_folder: /images/uploads
 
-#media_library:
- # name: cloudinary
+media_library:
+  name: cloudinary
 
 #publish_mode: editorial_workflow #optional, enables publishing workflow
 

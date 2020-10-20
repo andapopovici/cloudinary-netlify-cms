@@ -25,13 +25,13 @@
         console.log(response)
 
         window.ml = cloudinary.createMediaLibrary({
-        cloud_name: 'drzfqrj57',
-        api_key: '898113495945594',
-        username: 'website@freeagent.com',
-        timestamp: response.timestamp,
-        signature: response.signature,
-        button_class: 'cloudinary-button',
-        button_caption: 'Select Image or Video',
+          cloud_name: 'drzfqrj57',
+          api_key: '898113495945594',
+          username: 'website@freeagent.com',
+          timestamp: response.timestamp,
+          signature: response.signature,
+          button_class: 'cloudinary-button',
+          button_caption: 'Select Image or Video',
       }, {
           insertHandler: function (data) {
             data.assets.forEach(asset => { console.log("Inserted asset:",
@@ -39,8 +39,7 @@
             }
           },
           document.getElementById("open-btn")
-      )
-      });
+      )});
     </script>
   </body>
 </html>
