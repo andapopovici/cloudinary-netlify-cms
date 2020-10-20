@@ -24,7 +24,7 @@
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return response.blob();
+        return response;
       });
       
       window.ml = cloudinary.createMediaLibrary({

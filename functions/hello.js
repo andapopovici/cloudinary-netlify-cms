@@ -1,9 +1,11 @@
 exports.handler = function(event, context, callback) {
   const sha256 = require("crypto-js/sha256");
 
-  const { CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET} = process.env
+  const { CLOUDINARY_API_SECRET} = process.env
   const timestamp = Date.now();
-  const signature = `cloud_name=${CLOUDINARY_CLOUD_NAME}}&timestamp=${timestamp}&username=website@freeagent.com${CLOUDINARY_API_SECRET}`
+  const signature = `cloud_name=drzfqrj57&timestamp=${timestamp}&username=website@freeagent.com${CLOUDINARY_API_SECRET}`
+
+  console.log(sha256(signature))
 
   callback(null, {
     headers: {
