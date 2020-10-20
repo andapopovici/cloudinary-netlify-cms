@@ -21,17 +21,14 @@
       fetch("/.netlify/functions/hello")
       .then(function(response) {
         console.log("RESPONSE BODY")
-        console.log(response.body)
-        console.log("RESPONSE timestamp etc")
-        console.log(response.timestamp)
-        console.log(response.signature)
+        console.log(response.json())
 
         window.ml = cloudinary.createMediaLibrary({
         cloud_name: 'drzfqrj57',
         api_key: '898113495945594',
         username: 'website@freeagent.com',
-        timestamp: response.timestamp,
-        signature: response.signature,
+        timestamp: response.json().timestamp,
+        signature: response.json().signature,
         button_class: 'cloudinary-button',
         button_caption: 'Select Image or Video',
       }, {
