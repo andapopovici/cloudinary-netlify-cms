@@ -16,14 +16,10 @@
     <script src="previews.js" type="text/babel"></script>
     <script type="text/javascript">
       CMS.registerPreviewStyle('/stylesheets/all.css');
-      //CMS.registerMediaLibrary(cloudinary);
 
       fetch("/.netlify/functions/hello")
       .then(res => res.json())
       .then(function(response) {
-        console.log("RESPONSE")
-        console.log(response)
-
         window.ml = cloudinary.createMediaLibrary({
           cloud_name: 'drzfqrj57',
           api_key: '898113495945594',
@@ -35,8 +31,8 @@
             data.assets.forEach(asset => { console.log("Inserted asset:",
               JSON.stringify(asset, null, 2)) })
             }
-          },
-          document.getElementsByClassName("css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton e16dayda1")[0]
+          }//,
+          //document.getElementsByClassName("css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton e16dayda1")[0]
       )});
 
       
