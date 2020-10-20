@@ -1,9 +1,6 @@
 backend:
   name: git-gateway
 
-#local_backend: true
-
-#media_folder: source/images/uploads
 public_folder: /images/uploads
 
 media_library:

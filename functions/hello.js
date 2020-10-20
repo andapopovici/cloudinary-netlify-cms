@@ -7,7 +7,7 @@ exports.handler = function(event, context, callback) {
 
   callback(null, {
     headers: {
-      "Access-Control-Allow-Origin" :"open-media-library-manually--cms-cloudinary-demo.netlify.app",
+      "Access-Control-Allow-Origin" :"cms-cloudinary-demo.netlify.app",
       "Access-Control-Allow-Methods":"GET"
     },
     statusCode: 200,
