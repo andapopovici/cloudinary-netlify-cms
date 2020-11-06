@@ -3,4 +3,14 @@ date: 2020-11-04T11:39:33.900Z
 image: https://res.cloudinary.com/drzfqrj57/image/upload/v1604489886/freeagent/homepage/fa_augblog_audittrail_1200x600-a8b7bddc_mwtxdf.png
 weight: 1
 price: 9
-body: Test content
+body: >-
+  Test content
+
+
+  blah blah
+
+
+  ![](https://res.cloudinary.com/drzfqrj57/image/upload/v1601387046/whipped-coffee-5_zyplul.jpg)
+
+
+  blah blah
