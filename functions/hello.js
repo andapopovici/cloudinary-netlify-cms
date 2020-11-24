@@ -3,7 +3,7 @@ exports.handler = function(event, context, callback) {
 
   const { CLOUDINARY_API_SECRET} = process.env
   const timestamp = Date.now();
-  const signature = `cloud_name=drzfqrj57&timestamp=${timestamp}&username=website@freeagent.com${CLOUDINARY_API_SECRET}`
+  const signature = `cloud_name=drzfqrj57&timestamp=${timestamp}&username=anda.popovici@freeagent.com${CLOUDINARY_API_SECRET}`
 
   callback(null, {
     headers: {
